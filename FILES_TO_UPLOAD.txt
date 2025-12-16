@@ -1,0 +1,37 @@
+قائمة الملفات التي يجب رفعها على DreamHost
+==========================================
+
+✅ ملفات يجب رفعها:
+
+📁 المجلدات:
+- app/
+- components/
+- contexts/
+- lib/
+- public/
+- data/
+- .next/ (بعد البناء)
+
+📄 الملفات:
+- package.json
+- package-lock.json
+- next.config.js
+- tsconfig.json
+- tailwind.config.js
+- postcss.config.js
+- .htaccess
+- .env (أنشئه على الخادم من .env.example)
+
+❌ ملفات لا ترفع:
+- node_modules/ (سيتم تثبيته على الخادم)
+- .git/
+- .next/ (قبل البناء - ارفعه بعد البناء فقط)
+- .env.local
+- *.log
+
+🔧 خطوات ما بعد الرفع:
+1. npm install --production
+2. npm run build (إذا لم تقم بذلك محلياً)
+3. تأكد من صلاحيات data/ و public/uploads/
+4. أعد تشغيل Node.js App
+
